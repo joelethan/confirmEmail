@@ -39,7 +39,7 @@
     <script>
     function onClick() {
         const token = (new URLSearchParams(window.location.search)).get('token')
-        fetch(`https://ilearnafrica.herokuapp.com/api/user/confirmation/${token}`)
+        fetch(`http://localhost:5001/api/user/confirmation/${token}`)
         .then(response => response.json())
         .then(json => {
             document.getElementById("demo").innerHTML = json['email'];
