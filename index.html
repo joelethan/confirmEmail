@@ -42,7 +42,7 @@
         fetch(`http://localhost:5001/api/user/confirmation/${token}`)
         .then(response => response.json())
         .then(json => {
-            if (json['email'] === 'Email verified' || 'Email already verified') {
+            if (json['email'] === 'Email verified' || json['email'] === 'Email already verified') {
             document.getElementById("demo").innerHTML = json['email'];
                 location.href='https://www.google.com/'
             } else {
